@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    /*========== Colors ==========*/
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark: hsl(229, 23%, 23%);
+    --dark-greyish: hsl(227, 10%, 46%);
+
+    /* neutral */
+    --dark-grey: hsl(0, 0%, 59%);
+
+
+
+    /*========== Font and typography ==========*/
+    --body-font: "Kumbh Sans", sans-serif;
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 400;
+    --font-semi-bold: 700;
+
+    /*========== Margenes Bottom ==========*/
+    --mb-0-5: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-minimun: -1;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 968px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+}
+
+.grid {
+    display: grid;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--dark-cyan);
+}
+
+body::before {
+    position: absolute;
+    z-index: var(--z-minimun);
+    content: '';
+    top: 0%;
+    left: 0%;
+    height: 800px;
+    width: 900px;
+    background-image: url('./images/bg-pattern-top.svg'), linear-gradient(to right, var(--dark-cyan) 10% ,var(--dark-cyan) 20% );
+    background-position: 150% -425px, -75% 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* transform: rotate(30deg);  */
+    /* opacity: .6; */
+}
+
+body::after{
+    position: absolute;
+    z-index: var(--z-minimun);
+    content: '';
+    bottom: -16%;
+    right: -17%;
+    height: 620px;
+    width: 1350px;
+    background-image: url('./images/bg-pattern-bottom.svg'), linear-gradient(to right, var(--dark-cyan) 10% ,var(--dark-cyan) 20% ) ;
+    background-position:top ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
